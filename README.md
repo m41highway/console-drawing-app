@@ -49,3 +49,16 @@ mvn package
 ```java
 java -cp target/m41highway.drawingApp-0.1.0.jar com.m41highway.drawing.DrawingApp
 ```
+
+To run the program on Windows, you need to add this plugin in the pom config and specifiy the JDK location.
+
+```
+<plugin>
+    <artifactId>maven-compiler-plugin</artifactId>
+    <version>3.1</version>
+    <configuration>
+        <fork>true</fork>
+        <executable>C:\Program Files\Java\jdk1.8.0_144\bin\javac.exe</executable>
+    </configuration>
+</plugin>
+```
